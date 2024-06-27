@@ -4,10 +4,13 @@ authors = [
     {name = "Alexander Carrels"},
 ]
 
+
 description = "Sample Python Project for creating a new Python Module"
 readme = "README.md"
 version = "0.1.0"
 requires-python = ">=3.8.1"
+dependencies = ["Pillow >= 10.3.0"]
+
 
 [project.scripts]
 hello-world = "example_package:hello_world"

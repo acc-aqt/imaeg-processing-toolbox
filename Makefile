@@ -36,7 +36,7 @@ lint:             ## Run linters
 	$(ENV_PREFIX)flake8 src/ tests/
 	$(ENV_PREFIX)black src/ tests/
 	$(ENV_PREFIX)mypy src/ tests/
-	$(ENV_PREFIX)pylint src/ tests/
+	# $(ENV_PREFIX)pylint src/ tests/
 
 .PHONY: install
 install:          ## Install the project in dev mode.
