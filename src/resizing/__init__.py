@@ -1,9 +1,7 @@
 """Package for resizing of images."""
-import os.path
 import argparse
-from pathlib import Path
-from resize_image.resize_image import ImageResizeException, resize_image_to_megapixels
-from utils.utils import select_images
+from resizing.resizing import ImageResizeException, resize_image_to_megapixels
+from utils.utils import select_images, evaluate_target_path
 
 
 def resize_images():
@@ -29,18 +27,5 @@ def resize_images():
     input_files = select_images()
 
     for input_file in input_files:
-        if output_sub_directory:
-            target_dir = os.path.join(Path(input_file).parent, output_sub_directory)
-            if not os.path.isdir(target_dir):
-                os.mkdir(target_dir)
-        else:
-            target_dir = Path(input_file).parent  # output file goes to same directory like original file
-
-        if not suffix:
-            target_filename = Path(input_file).name
-        else:
-            target_filename = Path(input_file).stem + suffix + Path(input_file).suffix
-
-        resize_image_to_megapixels(
-            input_path=input_file, output_path=os.path.join(target_dir, target_filename), target_megapixels=target_mp
-        )
+        target_path = evaluate_target_path(input_file, output_sub_directory, suffix)
+        resize_image_to_megapixels(input_path=input_file, output_path=target_path, target_megapixels=target_mp)

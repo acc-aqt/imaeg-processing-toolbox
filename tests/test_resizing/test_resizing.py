@@ -1,7 +1,7 @@
-"""Testcases for resize_image.py go here."""
+"""Testcases for resizing.py go here."""
 
 import os
-from src.resize_image.resize_image import resize_image_to_megapixels
+from src.resizing.resizing import resize_image_to_megapixels
 
 current_module_path = os.path.dirname(__file__)
 example_image = os.path.join(current_module_path, "../example_image.jpg")
