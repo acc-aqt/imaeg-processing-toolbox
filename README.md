@@ -1,6 +1,11 @@
 # Image processing toolboxc
 
-Provides utility functions for image resizing.
+Provides utility functions for image processing.
+
+Following tools are implemented so far:
+- resize-images
+
+Call the tool-commands with --help option for further details.
 
 ## Setting up your own virtual environment
 
