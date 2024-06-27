@@ -3,9 +3,9 @@
 Provides utility functions for image processing.
 
 Following tools are implemented so far:
-- resize-images
+- `resize-images`
 
-Call the tool-commands with --help option for further details.
+Call the tool-commands with `--help` option for further details.
 
 ## Setting up your own virtual environment
 
