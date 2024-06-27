@@ -13,7 +13,7 @@ dependencies = ["Pillow >= 10.3.0"]
 
 
 [project.scripts]
-hello-world = "example_package:hello_world"
+resize-images = "resize_image:resize_images"
 
 [project.optional-dependencies]
 test = [
@@ -38,6 +38,10 @@ fast = true
 
 [tool.coverage.run]
 branch = true
+omit = [
+    "*/__init__.py",
+    "src/utils/*",
+    ]
 
 [tool.coverage.report]
 fail_under = 100

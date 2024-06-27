@@ -3,6 +3,12 @@
 from PIL import Image
 
 
+class ImageResizeException(Exception):
+    """Custom Exception to raise within the image resize process."""
+
+    pass
+
+
 def resize_image_to_megapixels(input_path, output_path, target_megapixels, quality=95):
     """
     Resizes an image to a specific number of megapixels.
@@ -31,5 +37,6 @@ def resize_image_to_megapixels(input_path, output_path, target_megapixels, quali
         resized_img = img.resize((new_width, new_height))
         resized_img.save(output_path, quality=quality)
 
-        print(f"Original dimensions: {width}x{height} ({current_pixels/1_000_000:.2f} MP)")
+        print(f"Wrote image '{output_path}'!")
+        print(f"Original dimensions: {width}x{height} ({current_pixels / 1_000_000:.2f} MP)")
         print(f"New dimensions: {new_width}x{new_height} ({target_megapixels:.2f} MP)")

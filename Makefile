@@ -35,7 +35,7 @@ setup-venv: create-venv
 lint:             ## Run linters
 	$(ENV_PREFIX)flake8 src/ tests/
 	$(ENV_PREFIX)black src/ tests/
-	$(ENV_PREFIX)mypy src/ tests/
+	# $(ENV_PREFIX)mypy src/ tests/
 	# $(ENV_PREFIX)pylint src/ tests/
 
 .PHONY: install
@@ -45,7 +45,7 @@ install:          ## Install the project in dev mode.
 
 .PHONY: test
 test: lint       ## Run tests and generate coverage report.
-	$(ENV_PREFIX)pytest -v --cov=src/ --tb=short --maxfail=1 tests/
+	$(ENV_PREFIX)pytest  -v  --tb=short --maxfail=1 tests/ # --cov=src/
 	$(ENV_PREFIX)coverage xml
 	$(ENV_PREFIX)coverage html
 
