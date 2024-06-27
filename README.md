@@ -1,9 +1,10 @@
-# Image processing toolboxc
+# Image processing toolbox
 
 Provides utility functions for image processing.
 
 Following tools are implemented so far:
 - `resize-images`
+- `frame-images`
 
 Call the tool-commands with `--help` option for further details.
 

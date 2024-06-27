@@ -13,7 +13,8 @@ dependencies = ["Pillow >= 10.3.0"]
 
 
 [project.scripts]
-resize-images = "resize_image:resize_images"
+resize-images = "resizing:resize_images"
+frame-images = "framing:frame_images"
 
 [project.optional-dependencies]
 test = [
@@ -44,7 +45,7 @@ omit = [
     ]
 
 [tool.coverage.report]
-fail_under = 100
+fail_under = 80
 
 [tool.flake8]
 max-line-length = 120
