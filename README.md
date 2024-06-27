@@ -1,6 +1,6 @@
-# my-python-template
+# Image processing toolboxc
 
-Template for my python projects.
+Provides utility functions for image resizing.
 
 ## Setting up your own virtual environment
 
