@@ -53,7 +53,7 @@ def add_frame(
         if frame_color == Colors.WHITE:
             background_color_tuple = (255, 255, 255)
         elif frame_color == Colors.BLACK:
-            background_color_tuple = (255, 255, 255)
+            background_color_tuple = (0, 0, 0)
         else:
             raise ImageFramingException("Background Color not yet implemented!")
 
